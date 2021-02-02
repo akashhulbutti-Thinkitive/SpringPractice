@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.akash.Employee" factory-bean="empFactory" factory-method="getInstance">
+		<property name="empId" value="4"></property>
+		<property name="empName" value="Akash"></property>
+		<property name="salary" value="950000"></property>
+	</bean>
+	
+	<bean id="empFactory" class="com.akash.EmployeeFactory"></bean>
+</beans>
